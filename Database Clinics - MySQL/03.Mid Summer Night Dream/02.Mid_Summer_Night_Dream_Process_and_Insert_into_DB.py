@@ -4,12 +4,13 @@ import pymysql
 import time
 
 myConnection = pymysql.connect(
-    host="localhost", user="root", password="root", db="shakespeare")
+    host="localhost", user="root", password="fdgriD$9754", db="shakespeare")
 
 cur = myConnection.cursor()
 
 # read character file and get all characters
-with open("datasets/characters.txt", "r") as char:
+
+with open("/Users/faridsoroush/Documents/GitHub/SQL-Data-Analysis-and-Visualization-Projects/Database Clinics - MySQL/03.Mid Summer Night Dream/datasets/characters.txt", "r") as char:
     characterList = char.read().splitlines()
 
 # as first character is unknown in Play file, initialize as Unknown
@@ -24,7 +25,7 @@ createSQL = "INSERT INTO amnd(char_name, play_text) VALUES(%s, %s);"
 # The character who is speaking
 # The line number
 # The phrase itself, trimmed of spaces
-with open("datasets/A_Midsummer_Nights_Dream.txt", "r") as playlines:
+with open("Database Clinics - MySQL/03.Mid Summer Night Dream/datasets/A_Midsummer_Nights_Dream.txt", "r") as playlines:
     for line in playlines:
         if line.upper().strip() in characterList:
             currentCharacter = line.upper().strip()

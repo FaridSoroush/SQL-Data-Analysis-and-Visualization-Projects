@@ -6,7 +6,7 @@ import pymysql
 import time
 
 myConnection = pymysql.connect(
-    host="localhost", user="root", password="root", db="shakespeare")
+    host="localhost", user="root", password="fdgriD$9754", db="shakespeare")
 
 cur = myConnection.cursor()
 start_time = time.time()
@@ -14,7 +14,7 @@ start_time = time.time()
 # Part 1: Update Character Name in uppercase for every line in plays
 updateSQL = "UPDATE amnd SET play_text = REPLACE(play_text, %s, %s);"
 
-with open("datasets/characters.txt", "r") as char:
+with open("/Users/faridsoroush/Documents/GitHub/SQL-Data-Analysis-and-Visualization-Projects/Database Clinics - MySQL/03.Mid Summer Night Dream/datasets/characters.txt", "r") as char:
     for character in char.read().splitlines():
         print("capitalizing occurences of ", character)
         updateStrings = character.capitalize(), character.upper()

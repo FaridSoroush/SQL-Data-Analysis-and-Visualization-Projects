@@ -4,7 +4,7 @@ import pymysql
 import time
 
 myConnection = pymysql.connect(
-    host="localhost", user="root", password="root", db="shakespeare")
+    host="localhost", user="root", password="fdgriD$9754", db="shakespeare")
 
 cur = myConnection.cursor()
 start_time = time.time()

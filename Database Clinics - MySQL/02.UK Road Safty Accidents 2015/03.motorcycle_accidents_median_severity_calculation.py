@@ -2,7 +2,7 @@
 import pymysql
 
 myConnection = pymysql.connect(
-    host="localhost", user="root", password="root", db="accidents")
+    host="localhost", user="root", password="fdgriD$9754", db="accidents")
 
 cur = myConnection.cursor()
 

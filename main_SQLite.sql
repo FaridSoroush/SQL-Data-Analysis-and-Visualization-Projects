@@ -1,0 +1,24 @@
+-- SQLite
+
+DROP TABLE IF EXISTS department;
+DROP TABLE IF EXISTS company;
+DROP TABLE IF EXISTS Employee;
+
+CREATE TABLE department(
+  id INTEGER PRIMARY KEY,
+  name TEXT NOT NULL
+);
+
+CREATE TABLE company(
+  id INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  revenue INTEGER
+);
+
+CREATE TABLE Employee(
+  id INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  city TEXT NOT NULL,
+  department_id INTEGER NOT NULL REFERENCES department(id),
+  salary INTEGER NOT NULL
+);
